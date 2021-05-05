@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddService"
+    android:background="#03A9F4">
+
+    <!-- Title of the activity -->
+    <TextView
+        android:id="@+id/addServiceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_service_title"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <!-- Input of the service name -->
+    <EditText
+        android:id="@+id/serviceNameText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/service_name"
+        android:textColorHint="@color/black"/>
+
+    <!-- Input of the service wage -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-65dp"
+        android:layout_below="@id/serviceNameText"
+        android:layout_alignStart="@+id/serviceNameText"
+        android:textColor="#0931C1" />
+
+    <EditText
+        android:id="@+id/serviceWageText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/service_wage"
+        android:textColorHint="@color/black"/>
+
+    <!-- Button to add the service -->
+    <Button
+        android:id="@+id/addingServiceButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/add_service"
+        android:paddingHorizontal="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+
+    <!-- Layout for adding documents -->
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="225dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/addDocsLinearLayout">
+
+        <!-- Add Required Documents -->
+        <Button
+            android:id="@+id/addDocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_document"
+            android:background="@color/light_grey"/>
+
+        <!-- List of documents -->
+        <ListView
+            android:id="@+id/docsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteDoc"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:layout_below="@+id/addDocsLinearLayout"
+        android:layout_alignEnd="@id/addDocsLinearLayout"
+        android:background="@color/light_grey"/>
+
+    <Button
+        android:id="@+id/clearDocs"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:layout_below="@id/addDocsLinearLayout"
+        android:layout_alignStart="@+id/addDocsLinearLayout"
+        android:background="@color/light_grey"/>
+
+    <!-- Layout for adding information -->
+    <LinearLayout
+        android:id="@+id/addInfoLinearLayout"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="425dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Add Required Documents -->
+        <Button
+            android:id="@+id/addInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_info"
+            android:background="@color/light_grey"/>
+
+        <!-- List of documents -->
+        <ListView
+            android:id="@+id/infoList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteInfo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:layout_below="@+id/addInfoLinearLayout"
+        android:layout_alignEnd="@id/addInfoLinearLayout"
+        android:background="@color/light_grey"/>
+
+    <Button
+        android:id="@+id/clearInfo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:layout_below="@id/addInfoLinearLayout"
+        android:layout_alignStart="@+id/addInfoLinearLayout"
+        android:background="@color/light_grey"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditService"
+    android:background="#03A9F4">
+
+    <TextView
+        android:id="@+id/EditServiceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_service"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editBaseName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditServiceTitle"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editBaseName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/current_service_name"
+        android:textColorHint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditServiceTitle"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:id="@+id/editServiceNameText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/new_service_name"
+        android:textColorHint="@color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBaseName"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <EditText
+        android:id="@+id/editServiceWageText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/service_wage"
+        android:textColorHint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editServiceNameText"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <LinearLayout
+        android:id="@+id/editDocsLinearLayout"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editServiceWageText"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/editDocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_document"
+            android:background="@color/light_grey"/>
+
+        <ListView
+            android:id="@+id/editDocsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/editDeleteDoc"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:background="@color/light_grey"
+        app:layout_constraintRight_toRightOf="@+id/editDocsLinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editDocsLinearLayout"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/editClearDocs"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:background="@color/light_grey"
+        app:layout_constraintLeft_toLeftOf="@+id/editDocsLinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editDocsLinearLayout"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <LinearLayout
+        android:id="@+id/editInfoLinearLayout"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editClearDocs"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/editInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_info"
+            android:background="@color/light_grey"/>
+
+        <ListView
+            android:id="@+id/editInfoList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/editDeleteInfo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:background="@color/light_grey"
+        app:layout_constraintRight_toRightOf="@+id/editInfoLinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/editInfoLinearLayout"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/editClearInfo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:background="@color/light_grey"
+        app:layout_constraintLeft_toLeftOf="@+id/editInfoLinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/editInfoLinearLayout"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/editServiceButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="@string/edit_service"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/errorMessageEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editServiceButt"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:layout_marginBottom="5dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
